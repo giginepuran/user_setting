@@ -1,0 +1,6 @@
+# User setting enviroment variables
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+alias tmux="TERM=xterm-256color tmux"
+alias load_venv="export ORIGINAL_PS1=\$PS1;source ./venv/bin/activate;export PS1=\$(grep -A 3 VENV_PS1 ~/.prompt_format | sed '/VENV_PS1=/d' )"
+alias unload_venv="deactivate;export PS1=\$ORIGINAL_PS1;unset ORIGINAL_PS1"
